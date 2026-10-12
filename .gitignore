@@ -1,0 +1,8 @@
+.DS_Store
+.gpt-image/
+.gpt-image-2/
+work/
+outputs/
+*.csv
+*.kml
+*.txt

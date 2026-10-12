@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f4f0e7">
+  <title>MY WAY TO SCHOOL — Nantes Student Route</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app" aria-live="polite">
+    <nav class="view-tabs" role="tablist" aria-label="Project pages">
+      <button class="view-tab is-active" id="routeTab" type="button" role="tab" aria-selected="true" aria-controls="ticket">ROUTE MEMORY</button>
+      <button class="view-tab" id="majorTab" type="button" role="tab" aria-selected="false" aria-controls="majorView">04 MAJOR EVENTS</button>
+    </nav>
+
+    <section class="ticket" id="ticket" aria-label="Nantes student route ticket">
+      <header class="ticket-title">
+        <img class="way-art" src="assets/way-title.png" alt="WAY">
+      </header>
+
+      <div class="red-band" aria-hidden="true">
+        <img class="sncf-logo" src="assets/sncf.png" alt="">
+        <img class="train-logo" src="assets/train-icon.png" alt="">
+        <span class="band-label">NANTES STUDENT ROUTE</span>
+        <img class="oui-logo" src="assets/oui.png" alt="">
+      </div>
+
+      <div class="ticket-body">
+        <img class="ticket-middle-art" src="assets/ticket-middle.png" alt="Nantes student route details">
+      </div>
+
+      <div class="stub" id="stub">
+        <div class="stub-copy">
+          <img class="ticket-stub-art" src="assets/ticket-stub.png" alt="Nantes student route ticket details">
+        </div>
+        <div class="qr-panel">
+          <img class="qr" id="qr" alt="Route memory QR code" src="assets/route-public-qr.png">
+          <p>ROUTE MEMORY CODE</p>
+          <small>SCAN FOR ROUTE MEMORY</small>
+        </div>
+        <button class="tear-handle" id="tearHandle" type="button" aria-label="Open route memory">
+          <span>OPEN ROUTE MEMORY</span><b>→</b>
+        </button>
+      </div>
+    </section>
+
+    <section class="major-window" id="majorView" aria-label="Four major route events" hidden>
+      <div class="tab-panel" id="majorPanel" role="tabpanel" aria-labelledby="majorTab">
+        <div class="major-window-head">
+          <div>
+            <p class="major-kicker">FIELD NOTES / ROUTE ARCHIVE</p>
+            <h2 id="major-title">04 MAJOR EVENTS</h2>
+          </div>
+          <span class="major-count">HOME → SCHOOL</span>
+        </div>
+        <div class="incident-grid">
+          <article class="incident-card incident-red">
+            <img class="incident-image" src="assets/event-card-declined.png" alt="Card declined event collage">
+          </article>
+          <article class="incident-card incident-yellow">
+            <img class="incident-image" src="assets/event-just-missed.png" alt="Just missed event collage">
+          </article>
+          <article class="incident-card incident-blue">
+            <img class="incident-image" src="assets/event-strike-ahead.png" alt="Strike ahead event collage">
+          </article>
+          <article class="incident-card incident-red-dark">
+            <img class="incident-image" src="assets/event-ticket-check.png" alt="Ticket check event collage">
+          </article>
+        </div>
+        <p class="major-caption">The ticket shows the planned route. These four records show what the map leaves out.</p>
+      </div>
+    </section>
+
+    <section class="reveal" id="reveal" hidden>
+      <div class="reveal-topline">TODAY'S ROUTE INTERRUPTION <span id="eventNumber">01 / 04</span></div>
+      <div class="event-line" aria-hidden="true"><span></span></div>
+      <p class="event-time" id="eventTime"></p>
+      <h2 id="eventTitle"></h2>
+      <p class="event-copy" id="eventCopy"></p>
+      <p class="event-note" id="eventNote"></p>
+      <div class="mini-route" id="miniRoute"></div>
+      <button class="restart" id="restart" type="button">RETURN TO TICKET</button>
+      <p class="disclaimer">STUDENT PROJECT · NOT A REAL TICKET OR COUPON</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
